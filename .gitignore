@@ -1,2 +1,5 @@
+.DS_Store
 *.dSYM
 *.build
+tests/
+*.pdf
