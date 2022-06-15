@@ -103,9 +103,7 @@ int main() {
     nbrOfContestants++;
 
     // print a linebreak to make the output more readable
-    if (nbrOfContestants > 0) {
-      cout << endl;
-    }
+    cout << endl;
   }
 
   // print the results to the user
