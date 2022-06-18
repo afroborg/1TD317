@@ -29,6 +29,9 @@ int main() {
   return 0;
 }
 
+/**
+ * Skriver ut en välkomsthälsning till användaren
+ */
 void skrivInfo() {
   cout << "Välkommen till inlämningsuppgift 3, räknaren!" << endl;
   cout << "Du kommer nu att få skriva in två tal och en operation." << endl
@@ -36,6 +39,11 @@ void skrivInfo() {
   ;
 }
 
+/**
+ * Läser in ett tal från använadren
+ * @param index används för att visa vilket av dem två talen som ska skrivas in
+ * @return int talet som användaren skrev in
+ */
 int lasEttTal(int index) {
   cout << "Skriv in tal " << index << ": ";
 
@@ -45,6 +53,10 @@ int lasEttTal(int index) {
   return tal;
 }
 
+/**
+ * Läser in operationen från användaren
+ * @return char operationen som användaren skrev in
+ */
 char lasOp() {
   cout << "Vilken operation vill du använda?" << endl;
   cout << "a) Addition" << endl;
@@ -64,6 +76,11 @@ char lasOp() {
   return op;
 }
 
+/**
+ * Ordnar två tal så att det första är mindre än det andra
+ * @param tal1 Första talet
+ * @param tal2 Andra talet
+ */
 void ordna(int &tal1, int &tal2) {
   if (tal1 > tal2) {
     int temp = tal1;
@@ -72,11 +89,20 @@ void ordna(int &tal1, int &tal2) {
   }
 }
 
+/**
+ * Gör en beräkning beroende på vilken operation användaren valt
+ * @param op operationen
+ * @param tal1 första talet
+ * @param tal2 andra talet
+ * @return int totalen efter beräkningarna
+ */
 int berakna(char op, int tal1, int tal2) {
   // 1 om multiplikation, 0 om addition eftersom vi inte kan multiplicera med 0
   // från början då allting blir 0 då
   int total = op == 'm' ? 1 : 0;
 
+  // loopa från första talet till andra talet och beroende på beräkning addera
+  // till totalen
   for (int i = tal1; i <= tal2; i++) {
     switch (op) {
     case 'a':
@@ -93,6 +119,10 @@ int berakna(char op, int tal1, int tal2) {
   return total;
 }
 
+/**
+ * Skriver ut resultatet till användaren
+ * @param resultat Totalen
+ */
 void skrivResultat(int resultat) {
   cout << "Resultatet är: " << resultat << endl;
 }

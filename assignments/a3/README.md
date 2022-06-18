@@ -114,3 +114,21 @@ r) Kvadratsumma
 r
 Resultatet är: 338350
 ```
+
+### Testkörning 8
+
+```
+Välkommen till inlämningsuppgift 3, räknaren!
+Du kommer nu att få skriva in två tal och en operation.
+
+Skriv in tal 1: 1
+Skriv in tal 2: 100
+Vilken operation vill du använda?
+a) Addition
+m) Multiplikation
+r) Kvadratsumma
+m
+Resultatet är: 0
+```
+
+Resultatet blir 0 här eftersom multiplikation från 1-100 blir ett otroligt stort tal, vilket overflowar och ger 0.
