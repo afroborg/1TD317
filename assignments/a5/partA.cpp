@@ -6,8 +6,6 @@
 
 using namespace std;
 
-// Globala konstanter:
-
 // Tips: Anv�nd de globala konstanterna ANTAL_BOKSTAVER och ANTAL_SPRAK
 // ist�llet f�r v�rdena 26 och 4 i programmet.
 const int ANTAL_BOKSTAVER = 26; // A-Z
