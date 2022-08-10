@@ -6,7 +6,7 @@ using namespace std;
 
 const int ANTAL_BOKSTAVER = 26; // A-Z
 
-void berakna_histogram_abs(const string rad, int frequency[]);
+void berakna_histogram_abs(const string input, int frequency[]);
 void skriv_histogram_abs(int frequency[], int characterCount);
 
 int main() {
@@ -29,13 +29,13 @@ int main() {
   return 0;
 }
 
-void berakna_histogram_abs(const string rad, int frequency[]) {
+void berakna_histogram_abs(const string input, int frequency[]) {
 
   // för varje bokstav i raden
-  for (int i = 0; i < rad.length(); i++) {
+  for (int i = 0; i < input.length(); i++) {
 
     // kontrollera att det är en bokstav mellan a och z
-    bool isCharacter = isalpha(rad[i]);
+    bool isCharacter = isalpha(input[i]);
 
     // om det inte är det, skippa den
     if (!isCharacter) {
@@ -43,7 +43,7 @@ void berakna_histogram_abs(const string rad, int frequency[]) {
     }
 
     // konvertera till gemen, för att ha samma form på allt
-    char lowercase = tolower(rad[i]);
+    char lowercase = tolower(input[i]);
 
     int index = lowercase - 'a';
 
