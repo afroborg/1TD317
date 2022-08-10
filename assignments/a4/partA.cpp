@@ -6,7 +6,7 @@ using namespace std;
 
 const int ANTAL_BOKSTAVER = 26; // A-Z
 
-void berakna_histogram_abs(const string input, int frequency[]);
+int berakna_histogram_abs(const string input, int frequency[]);
 void skriv_histogram_abs(int frequency[], int characterCount);
 
 int main() {
@@ -23,13 +23,14 @@ int main() {
   // hämta användarens input
   getline(cin, input);
 
-  berakna_histogram_abs(input, frequency);
-  skriv_histogram_abs(frequency, input.length());
+  int totalCharacters = berakna_histogram_abs(input, frequency);
+  skriv_histogram_abs(frequency, totalCharacters);
 
   return 0;
 }
 
-void berakna_histogram_abs(const string input, int frequency[]) {
+int berakna_histogram_abs(const string input, int frequency[]) {
+  int totalCharacters = 0;
 
   // för varje bokstav i raden
   for (int i = 0; i < input.length(); i++) {
@@ -49,7 +50,10 @@ void berakna_histogram_abs(const string input, int frequency[]) {
 
     // uppdatera rätt index i listan av alla bokstäver
     frequency[index]++;
+    totalCharacters++;
   }
+
+  return totalCharacters;
 }
 
 void skriv_histogram_abs(int frequency[], int characterCount) {
