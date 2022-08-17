@@ -1,0 +1,6 @@
+Antal transaktioner = 4
+Datum	Typ	Namn	Belopp	Antal	Lista över kompisar
+190721	mat	Eva	200	1	Bosse	
+190722	mat	Eva	400	1	Bosse	
+190725	transp	Eva	600	1	Bosse	
+190725	mat	Bosse	200	1	Eva	
